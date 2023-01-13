@@ -1,0 +1,21 @@
+.footer {
+  background-color: $dark__bg__color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__container {
+    display: flex;
+    align-items: baseline;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &__logo {
+    @extend .logo;
+
+    display: block;
+    color: $white__bg__color;
+    margin-bottom: 20px;
+  }
+}

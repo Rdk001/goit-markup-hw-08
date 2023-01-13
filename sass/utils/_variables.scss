@@ -1,0 +1,39 @@
+// переменные
+$main__text__color: #212121;
+$secondary__text__color: #757575;
+$main__white__color: #f5f5f5;
+$secondary__white__color: #f5f4fa;
+$white__bg__color: #ffffff;
+$dark__bg__color: #2f303a;
+$blue__bg__color: #2196f3;
+$bg__btn__color: #188ce8;
+$icon__main__color: #afb1b8;
+$timing__function: cubic-bezier(0.4, 0, 0.2, 1);
+$main__font: Roboto, sans-serif;
+
+// MIXIN
+
+@mixin navLinkFont() {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+@mixin centredFlex() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin animation($type) {
+  transition: $type 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin btnFont() {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+}

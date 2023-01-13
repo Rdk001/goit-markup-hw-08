@@ -1,0 +1,36 @@
+.container__footer__icon {
+  margin-left: 70px;
+}
+.footer__icon {
+  fill: $white__bg__color;
+
+  &__title {
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $white__bg__color;
+  }
+  &__list {
+    display: flex;
+    gap: 10px;
+  }
+}
+.footer__icon__link {
+  @include centredFlex();
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+
+  @include animation(background);
+  &:hover,
+  &:focus {
+    background: $blue__bg__color;
+  }
+}

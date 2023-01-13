@@ -1,0 +1,30 @@
+.clients__list {
+  display: flex;
+  gap: 30px;
+}
+
+.clients__icon {
+  fill: $icon__main__color;
+
+  @include animation(fill);
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: $blue__bg__color;
+  }
+}
+.clients__link {
+  @include centredFlex();
+  width: 170px;
+  height: 92px;
+  border: 1px solid $icon__main__color;
+  border-radius: 4px;
+
+  @include animation(border);
+  &:hover,
+  &:focus {
+    border: 1px solid $blue__bg__color;
+  }
+}
+.clients__title {
+  @extend .activities__title;
+}

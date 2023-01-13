@@ -1,0 +1,32 @@
+.contacts {
+  display: flex;
+  margin-left: auto;
+  &__item + &__item {
+    margin-left: 50px;
+  }
+}
+.contacts__link {
+  @include centredFlex();
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include navLinkFont();
+  color: $secondary__text__color;
+  @include animation(color);
+  &:hover,
+  &:focus {
+    color: $blue__bg__color;
+  }
+}
+
+.contacts__icon {
+  @include centredFlex();
+  margin-right: 10px;
+  fill: $secondary__text__color;
+  @include animation(fill);
+
+  .contacts__link:hover &,
+  .contacts__link:focus & {
+    fill: $blue__bg__color;
+  }
+}

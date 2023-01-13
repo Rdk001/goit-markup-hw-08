@@ -1,0 +1,31 @@
+.quality__list {
+  @extend .activities__list;
+}
+
+.quality__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $main__text__color;
+
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.quality__text {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  color: $secondary__text__color;
+}
+.quality__icon--box {
+  @include centredFlex();
+
+  width: 270px;
+  height: 120px;
+  background-color: $secondary__white__color;
+  margin-bottom: 30px;
+}

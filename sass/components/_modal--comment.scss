@@ -1,0 +1,40 @@
+.modal__form__label--comment {
+  position: relative;
+  display: block;
+  @include animation(border);
+}
+.modal__form__text--comment {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: $secondary__text__color;
+}
+.modal__form__textarea {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  padding: 0;
+  &:focus {
+    border: 1px solid $blue__bg__color;
+  }
+
+  &[placeholder="Введіть текст"] {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+
+    padding-left: 16px;
+    padding-top: 12px;
+    padding-right: 15px;
+  }
+}
