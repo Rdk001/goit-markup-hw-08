@@ -1,0 +1,30 @@
+.footer {
+  background-color: $dark__bg__color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__container {
+    // display: flex;
+    // align-items: baseline;
+
+    @media screen and(min-width:480px) {
+      width: 480px;
+    }
+    @media screen and(min-width:768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &__logo {
+    text-align: center;
+    @extend .logo;
+
+    display: block;
+    color: $white__bg__color;
+    margin-bottom: 20px;
+  }
+}

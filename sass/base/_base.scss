@@ -3,6 +3,9 @@ body {
   color: $main__text__color;
   font-family: $main__font;
 }
+body.modal-open {
+  overflow: hidden;
+}
 
 .list {
   list-style: none;
@@ -25,19 +28,30 @@ p {
   padding: 0;
 }
 :focus {
-  outline: 1px solid gray;
+  // outline: 1px solid gray;
+  outline: none;
 }
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and(min-width:480px) {
+    width: 480px;
+  }
+  @media screen and(max-width:767px) {
+    width: 480px;
+  }
+  @media screen and(min-width:768px) {
+    width: 768px;
+  }
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img {
