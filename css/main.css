@@ -367,6 +367,8 @@ img {
 @media screen and (min-width: 768px) {
   .btn__menu {
     display: none;
+    width: 24px;
+    height: 16px;
   }
 }
 .btn__menu.is-open .icon__cross {
@@ -375,6 +377,8 @@ img {
 
 .icon__cross {
   display: none;
+  width: 24px;
+  height: 16px;
 }
 
 .is-open .icon__menu {
