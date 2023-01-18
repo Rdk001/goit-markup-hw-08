@@ -300,10 +300,8 @@ img {
   }
 }
 .soc__list {
-  position: absolute;
   display: flex;
   gap: 20px;
-  bottom: 50px;
 }
 @media screen and (min-width: 768px) {
   .soc__list {
@@ -331,7 +329,9 @@ img {
     display: none;
   }
   .menu__container.is-open {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1030,6 +1030,7 @@ img {
 @media screen and (max-width: 1199px) {
   .modal__form__title {
     width: 370px;
+    margin-right: 78px;
   }
 }
 @media screen and (min-width: 1200px) {
