@@ -65,6 +65,7 @@
   &.current {
     color: $blue__bg__color;
   }
+
   @media screen and(max-width:767px) {
     font-weight: 500;
     font-size: 40px;
@@ -90,22 +91,13 @@
       margin-left: 50px;
     }
   }
+
   .navigation__link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
 
     @include navLinkFont();
-
-    color: $main__text__color;
-
-    @include animation(color);
-
-    &:hover,
-    &:focus,
-    &.current {
-      color: $blue__bg__color;
-    }
   }
   .current::after {
     position: absolute;
