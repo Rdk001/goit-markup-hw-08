@@ -1337,6 +1337,9 @@ img {
   .projects__item {
     margin-bottom: 0;
   }
+  .projects__card__text.veb {
+    padding-bottom: 35px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .projects__list {
