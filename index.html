@@ -25,10 +25,11 @@
         <a href="./index.html" class="logo link"
           ><span class="accent">Web</span>Studio</a
         >
-        <button class="btn__menu is-open" data-menu-button type="button">
+        <button class="btn__menu is-open" type="button" data-menu-button>
           <svg
-            width="24px"
-            height="16px"
+            role="img"
+            width="24"
+            height="16"
             aria-label="Перемикач мобільного меню"
             aria-controls="menu__container"
             aria-expanded="false"
@@ -36,12 +37,10 @@
             <use
               href="./images/icons.svg#menu"
               class="icon__menu"
-              width="24px"
+              width="24"
+              height="16"
             ></use>
-            <use
-              href="./images/icons.svg#icon-close-black-18dp-2-1-1"
-              class="icon__cross"
-            ></use>
+            <use href="./images/icons.svg#cross" class="icon__cross"></use>
           </svg>
         </button>
         <div class="menu__container is-open" id="menu__container" data-menu>
@@ -85,13 +84,13 @@
               <a class="soc__link link" href="">Instagram</a>
             </li>
             <li class="soc__item">
-              <a class="soc__link link" href=""></a>Twitter
+              <a class="soc__link link" href="">Twitter</a>
             </li>
             <li class="soc__item">
-              <a class="soc__link link" href=""></a>Facebook
+              <a class="soc__link link" href="">Facebook</a>
             </li>
             <li class="soc__item">
-              <a class="soc__link link" href=""></a>Linkedin
+              <a class="soc__link link" href="">Linkedin</a>
             </li>
           </ul>
         </div>
@@ -171,9 +170,15 @@
             <li class="activities__item">
               <div class="activities__thumb">
                 <img
-                  src="images/img-1.jpg"
+                  srcset="
+                    ./images/activities-1-370.jpg   370w,
+                    ./images/activities-1-740.jpg   740w,
+                    ./images/activities-1-1110.jpg 1110w
+                  "
+                  src="images/activities-1-370.jpg"
                   alt="людина працюе за компьютером"
-                  width="370"
+                  sizes="(min-width:1200px) 33vh, 33vh"
+                  width="370px"
                   class="images"
                 />
                 <div class="activities__overlay">
@@ -184,9 +189,15 @@
             <li class="activities__item">
               <div class="activities__thumb">
                 <img
-                  src="images/img-2.jpg"
+                  srcset="
+                    ./images/activities-2-370.jpg   370w,
+                    ./images/activities-2-740.jpg   740w,
+                    ./images/activities-2-1110.jpg 1110w
+                  "
+                  src="./images/activities-2-370.jpg"
                   alt="людина працюе за ноутбуком"
-                  width="370"
+                  sizes="(min-width:1200px) 33vh, 33vh"
+                  width="370px"
                   class="images"
                 />
                 <div class="activities__overlay">
@@ -197,9 +208,15 @@
             <li class="activities__item">
               <div class="activities__thumb">
                 <img
-                  src="images/img-3.jpg"
+                  srcset="
+                    ./images/activities-3-370.jpg   370w,
+                    ./images/activities-3-740.jpg   740w,
+                    ./images/activities-3-1110.jpg 1110w
+                  "
+                  src="./images/activities-3-370.jpg"
                   alt="людина працюе за iPad"
-                  width="370"
+                  sizes="(min-width:1200px) 33vh, 33vh"
+                  width="370px"
                   class="images"
                 />
                 <div class="activities__overlay">
@@ -219,10 +236,18 @@
           <ul class="our__team__list list">
             <li class="our__team__item">
               <img
-                src="images/img-4.jpg"
+                srcset="
+                  ./images/team-1-270.jpg 270w,
+                  ./images/team-1-354.jpg 354w,
+                  ./images/team-1-450.jpg 450w,
+                  ./images/team-1-540.jpg 540w,
+                  ./images/team-1-708.jpg 708w,
+                  ./images/team-1-900.jpg 900w
+                "
+                src="./images/team-1-270.jpg"
                 alt="photo-Ігор Дем'яненко"
-                width="270"
-                class="images"
+                sizes="(min-width:1200px) 25vh, (min-width:768px) 50vh, (max-width:767px) 100vh, 25vh"
+                class="images team"
               />
               <div class="photo__thumb">
                 <h3 class="photo__title">Ігор Дем'яненко</h3>
@@ -253,10 +278,18 @@
             </li>
             <li class="our__team__item item">
               <img
-                src="images/img-5.jpg"
+                srcset="
+                  ./images/team-2-270.jpg 270w,
+                  ./images/team-2-354.jpg 354w,
+                  ./images/team-2-450.jpg 450w,
+                  ./images/team-2-540.jpg 540w,
+                  ./images/team-2-708.jpg 708w,
+                  ./images/team-2-900.jpg 900w
+                "
+                src="./images/team-2-270.jpg"
                 alt="photo-Ольга Рєпіна"
-                width="270"
-                class="images"
+                sizes="(min-width:1200px) 25vh, (min-width:768px) 50vh, (max-width:767px) 100vh, 25vh"
+                class="images team"
               />
               <div class="photo__thumb">
                 <h3 class="photo__title">Ольга Рєпіна</h3>
@@ -287,10 +320,18 @@
             </li>
             <li class="our__team__item item">
               <img
-                src="images/img-6.jpg"
+                srcset="
+                  ./images/team-3-270.jpg 270w,
+                  ./images/team-3-354.jpg 354w,
+                  ./images/team-3-450.jpg 450w,
+                  ./images/team-3-540.jpg 540w,
+                  ./images/team-3-708.jpg 708w,
+                  ./images/team-3-900.jpg 900w
+                "
+                src="./images/team-3-270.jpg"
                 alt="photo-Микола Тарасов"
-                width="270"
-                class="images"
+                sizes="(min-width:1200px) 25vh, (min-width:768px) 50vh, (max-width:767px) 100vh, 25vh"
+                class="images team"
               />
               <div class="photo__thumb">
                 <h3 class="photo__title">Микола Тарасов</h3>
@@ -321,10 +362,18 @@
             </li>
             <li class="our__team__item item">
               <img
-                src="images/img-7.jpg"
+                srcset="
+                  ./images/team-4-270.jpg 270w,
+                  ./images/team-4-354.jpg 354w,
+                  ./images/team-4-450.jpg 450w,
+                  ./images/team-4-540.jpg 540w,
+                  ./images/team-4-708.jpg 708w,
+                  ./images/team-4-900.jpg 900w
+                "
+                src="./images/team-4-270.jpg"
                 alt="photo-Михайло Єрмаков"
-                width="270"
-                class="images"
+                sizes="(min-width:1200px) 25vh, (min-width:768px) 50vh, (max-width:767px) 100vh, 25vh"
+                class="images team"
               />
               <div class="photo__thumb">
                 <h3 class="photo__title">Михайло Єрмаков</h3>

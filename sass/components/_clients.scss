@@ -1,8 +1,15 @@
 .clients__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  @media screen and(max-width:767px) {
+    width: 480px;
+  }
 }
 
+.clients__title {
+  @extend .our__team__title;
+}
 .clients__icon {
   fill: $icon__main__color;
 
@@ -14,7 +21,16 @@
 }
 .clients__link {
   @include centredFlex();
-  width: 170px;
+  @media screen and(max-width:767px) {
+    width: 210px;
+  }
+  @media screen and(min-width:768px) {
+    width: 226px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
+
   height: 92px;
   border: 1px solid $icon__main__color;
   border-radius: 4px;
@@ -24,7 +40,4 @@
   &:focus {
     border: 1px solid $blue__bg__color;
   }
-}
-.clients__title {
-  @extend .activities__title;
 }

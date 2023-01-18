@@ -4,7 +4,13 @@
   display: block;
   padding: 10px 50px;
   margin-top: 30px;
-  margin-left: 85px;
+  @media screen and(max-width:1199px) {
+    margin-left: 85px;
+  }
+  @media screen and(min-width:1200px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   background: $blue__bg__color;
   color: $white__bg__color;

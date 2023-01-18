@@ -8,10 +8,19 @@
   opacity: 1;
   @include animation(opacity);
   z-index: 1;
+  overflow-y: scroll;
 
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .modal__form__label {
+    width: 370px;
+  }
+  .modal__form__title {
+    width: 370px;
   }
 }
 
@@ -19,10 +28,15 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
   padding: 40px;
-
+  @media screen and (max-width: 1199px) {
+    width: 450px;
+    height: 609px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
   background: $white__bg__color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -31,22 +45,37 @@
   transform: translate(-50%, -50%) scale(1);
   @include animation(transform);
 }
-
 .modal__form {
   width: 448px;
 
   &__title {
+    @media screen and (max-width: 1199px) {
+      width: 370px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 448px;
+      margin-bottom: 30px;
+    }
+
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
 
     color: $main__text__color;
     margin: 0 auto 30px auto;
+    margin-bottom: 20px;
   }
 }
 .modal__form__label {
+  @media screen and (max-width: 1199px) {
+    width: 370px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 448px;
+  }
+
   position: relative;
   margin-bottom: 28px;
   display: block;

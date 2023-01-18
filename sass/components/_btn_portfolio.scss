@@ -1,12 +1,22 @@
-.btn__list {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-.btn__item + .btn__item {
-  margin-left: 8px;
+@media screen and(max-width:767px) {
+  .btn__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 40px;
+  }
 }
 
+@media screen and (min-width: 768px) {
+  .btn__list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .btn__item + .btn__item {
+    margin-left: 8px;
+  }
+}
 .button__secondary {
   font-family: inherit;
   font-style: normal;
