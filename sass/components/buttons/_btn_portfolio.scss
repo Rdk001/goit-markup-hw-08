@@ -1,0 +1,52 @@
+@media screen and(max-width:767px) {
+  .btn__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn__list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .btn__item + .btn__item {
+    margin-left: 8px;
+  }
+}
+.button__secondary {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+
+  border-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+
+  background-color: $secondary__white__color;
+  color: $main__text__color;
+
+  @include animation(background-color);
+  @include animation(color);
+  @include animation(box-shadow);
+
+  &:hover,
+  &:focus {
+    background-color: $blue__bg__color;
+    color: $white__bg__color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
