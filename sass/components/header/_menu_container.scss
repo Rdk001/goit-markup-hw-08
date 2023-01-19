@@ -7,6 +7,7 @@
     height: 796px;
     padding: 48px 40px;
     background-color: $white__bg__color;
+    z-index: 1;
 
     display: none;
     &.is-open {

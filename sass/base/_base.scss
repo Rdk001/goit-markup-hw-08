@@ -2,9 +2,9 @@ body {
   background: $white__bg__color;
   color: $main__text__color;
   font-family: $main__font;
-}
-body.modal-open {
-  overflow: hidden;
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 .list {

@@ -25,20 +25,23 @@
         <a href="./index.html" class="logo link"
           ><span class="accent">Web</span>Studio</a
         >
-        <button class="btn__menu is-open" type="button" data-menu-button>
+        <button class="btn__menu" type="button" data-menu-button>
           <svg
+            class="icon__menu"
             role="img"
-            width="44"
-            height="44"
+            width="32"
+            height="32"
             aria-label="Перемикач мобільного меню"
             aria-controls="menu__container"
             aria-expanded="false"
           >
-            <use href="./images/icons.svg#menu" class="icon__menu"></use>
-            <use href="./images/icons.svg#cross" class="icon__cross"></use>
+            <use href="./images/icons.svg#menu"></use>
+          </svg>
+          <svg width="32" height="32" class="icon__cross">
+            <use href="./images/icons.svg#cross"></use>
           </svg>
         </button>
-        <div class="menu__container is-open" id="menu__container" data-menu>
+        <div class="menu__container" id="menu__container" data-menu>
           <nav class="navigation">
             <ul class="navigation__list list">
               <li class="navigation__item">
@@ -119,21 +122,34 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="projects__thumb">
-                  <img
-                    srcset="
-                      ./images/portfolio-1-354.jpg 354w,
-                      ./images/portfolio-1-370.jpg 370w,
-                      ./images/portfolio-1-450.jpg 450w,
-                      ./images/portfolio-1-708.jpg 708w,
-                      ./images/portfolio-1-740.jpg 740w,
-                      ./images/portfolio-1-900.jpg 900w
-                    "
-                    width="370"
-                    class="img__project"
-                    src="images/portfolio-1-370.jpg"
-                    alt="ноутбук"
-                    sizes="(min-width:1200px) 33vh, (min-width:768px) 50vh, (max-width:767px) 100vh, 100vh"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/portfolio-1-370.jpg 1x,
+                        ./images/portfolio-1-740.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/portfolio-1-354.jpg 1x,
+                        ./images/portfolio-1-708.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/portfolio-1-450.jpg 1x,
+                        ./images/portfolio-1-900.jpg 2x
+                      "
+                    />
+                    <img
+                      class="img__project"
+                      src="images/portfolio-1-370.jpg"
+                      alt="ноутбук"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -152,21 +168,34 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="projects__thumb">
-                  <img
-                    srcset="
-                      ./images/portfolio-2-354.jpg 354w,
-                      ./images/portfolio-2-370.jpg 370w,
-                      ./images/portfolio-2-450.jpg 450w,
-                      ./images/portfolio-2-708.jpg 708w,
-                      ./images/portfolio-2-740.jpg 740w,
-                      ./images/portfolio-2-900.jpg 900w
-                    "
-                    width="370"
-                    class="img__project"
-                    src="images/portfolio-2-370.jpg"
-                    alt="баскетболісти"
-                    sizes="(min-width:1200px) 33vh, (min-width:768px) 50vh, (max-width:767px) 100vh, 100vh"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/portfolio-2-370.jpg 1x,
+                        ./images/portfolio-2-740.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/portfolio-2-354.jpg 1x,
+                        ./images/portfolio-2-708.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/portfolio-2-450.jpg 1x,
+                        ./images/portfolio-2-900.jpg 2x
+                      "
+                    />
+                    <img
+                      class="img__project"
+                      src="images/portfolio-2-370.jpg"
+                      alt="баскетболісти"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -187,21 +216,34 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="projects__thumb">
-                  <img
-                    srcset="
-                      ./images/portfolio-3-354.jpg 354w,
-                      ./images/portfolio-3-370.jpg 370w,
-                      ./images/portfolio-3-450.jpg 450w,
-                      ./images/portfolio-3-708.jpg 708w,
-                      ./images/portfolio-3-740.jpg 740w,
-                      ./images/portfolio-3-900.jpg 900w
-                    "
-                    width="370"
-                    class="img__project"
-                    src="images/portfolio-3-370.jpg"
-                    alt="логотип seafood"
-                    sizes="(min-width:1200px) 33vh, (min-width:768px) 50vh, (max-width:767px) 100vh, 100vh"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/portfolio-3-370.jpg 1x,
+                        ./images/portfolio-3-740.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/portfolio-3-354.jpg 1x,
+                        ./images/portfolio-3-708.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/portfolio-3-450.jpg 1x,
+                        ./images/portfolio-3-900.jpg 2x
+                      "
+                    />
+                    <img
+                      class="img__project"
+                      src="images/portfolio-3-370.jpg"
+                      alt="логотип seafood"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -220,21 +262,34 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="projects__thumb">
-                  <img
-                    srcset="
-                      ./images/portfolio-4-354.jpg 354w,
-                      ./images/portfolio-4-370.jpg 370w,
-                      ./images/portfolio-4-450.jpg 450w,
-                      ./images/portfolio-4-708.jpg 708w,
-                      ./images/portfolio-4-740.jpg 740w,
-                      ./images/portfolio-4-900.jpg 900w
-                    "
-                    width="370"
-                    class="img__project"
-                    src="images/portfolio-4-370.jpg"
-                    alt="навушники"
-                    sizes="(min-width:1200px) 33vh, (min-width:768px) 50vh, (max-width:767px) 100vh, 100vh"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/portfolio-4-370.jpg 1x,
+                        ./images/portfolio-4-740.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/portfolio-4-354.jpg 1x,
+                        ./images/portfolio-4-708.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/portfolio-4-450.jpg 1x,
+                        ./images/portfolio-4-900.jpg 2x
+                      "
+                    />
+                    <img
+                      class="img__project"
+                      src="images/portfolio-4-370.jpg"
+                      alt="навушники"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -253,21 +308,34 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="projects__thumb">
-                  <img
-                    srcset="
-                      ./images/portfolio-5-354.jpg 354w,
-                      ./images/portfolio-5-370.jpg 370w,
-                      ./images/portfolio-5-450.jpg 450w,
-                      ./images/portfolio-5-708.jpg 708w,
-                      ./images/portfolio-5-740.jpg 740w,
-                      ./images/portfolio-5-900.jpg 900w
-                    "
-                    width="370"
-                    class="img__project"
-                    src="images/portfolio-5-370.jpg"
-                    alt="дві коробки"
-                    sizes="(min-width:1200px) 33vh, (min-width:768px) 50vh, (max-width:767px) 100vh, 100vh"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/portfolio-5-370.jpg 1x,
+                        ./images/portfolio-5-740.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/portfolio-5-354.jpg 1x,
+                        ./images/portfolio-5-708.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/portfolio-5-450.jpg 1x,
+                        ./images/portfolio-5-900.jpg 2x
+                      "
+                    />
+                    <img
+                      class="img__project"
+                      src="images/portfolio-5-370.jpg"
+                      alt="дві коробки"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -286,21 +354,34 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="projects__thumb">
-                  <img
-                    srcset="
-                      ./images/portfolio-6-354.jpg 354w,
-                      ./images/portfolio-6-370.jpg 370w,
-                      ./images/portfolio-6-450.jpg 450w,
-                      ./images/portfolio-6-708.jpg 708w,
-                      ./images/portfolio-6-740.jpg 740w,
-                      ./images/portfolio-6-900.jpg 900w
-                    "
-                    width="370"
-                    class="img__project"
-                    src="images/portfolio-6-370.jpg"
-                    alt="монітор"
-                    sizes="(min-width:1200px) 33vh, (min-width:768px) 50vh, (max-width:767px) 100vh, 100vh"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/portfolio-6-370.jpg 1x,
+                        ./images/portfolio-6-740.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/portfolio-6-354.jpg 1x,
+                        ./images/portfolio-6-708.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/portfolio-6-450.jpg 1x,
+                        ./images/portfolio-6-900.jpg 2x
+                      "
+                    />
+                    <img
+                      class="img__project"
+                      src="images/portfolio-6-370.jpg"
+                      alt="монітор"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -321,21 +402,34 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="projects__thumb">
-                  <img
-                    srcset="
-                      ./images/portfolio-7-354.jpg 354w,
-                      ./images/portfolio-7-370.jpg 370w,
-                      ./images/portfolio-7-450.jpg 450w,
-                      ./images/portfolio-7-708.jpg 708w,
-                      ./images/portfolio-7-740.jpg 740w,
-                      ./images/portfolio-7-900.jpg 900w
-                    "
-                    width="370"
-                    class="img__project"
-                    src="images/portfolio-7-370.jpg"
-                    alt="книжка"
-                    sizes="(min-width:1200px) 33vh, (min-width:768px) 50vh, (max-width:767px) 100vh, 100vh"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/portfolio-7-370.jpg 1x,
+                        ./images/portfolio-7-740.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/portfolio-7-354.jpg 1x,
+                        ./images/portfolio-7-708.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/portfolio-7-450.jpg 1x,
+                        ./images/portfolio-7-900.jpg 2x
+                      "
+                    />
+                    <img
+                      class="img__project"
+                      src="images/portfolio-7-370.jpg"
+                      alt="книжка"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -354,21 +448,34 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="projects__thumb">
-                  <img
-                    srcset="
-                      ./images/portfolio-8-354.jpg 354w,
-                      ./images/portfolio-8-370.jpg 370w,
-                      ./images/portfolio-8-450.jpg 450w,
-                      ./images/portfolio-8-708.jpg 708w,
-                      ./images/portfolio-8-740.jpg 740w,
-                      ./images/portfolio-8-900.jpg 900w
-                    "
-                    width="370"
-                    class="img__project"
-                    src="images/portfolio-8-370.jpg"
-                    alt="лейбел"
-                    sizes="(min-width:1200px) 33vh, (min-width:768px) 50vh, (max-width:767px) 100vh, 100vh"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/portfolio-8-370.jpg 1x,
+                        ./images/portfolio-8-740.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/portfolio-8-354.jpg 1x,
+                        ./images/portfolio-8-708.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/portfolio-8-450.jpg 1x,
+                        ./images/portfolio-8-900.jpg 2x
+                      "
+                    />
+                    <img
+                      class="img__project"
+                      src="images/portfolio-8-370.jpg"
+                      alt="лейбел"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -387,21 +494,34 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="projects__thumb">
-                  <img
-                    srcset="
-                      ./images/portfolio-9-354.jpg 354w,
-                      ./images/portfolio-9-370.jpg 370w,
-                      ./images/portfolio-9-450.jpg 450w,
-                      ./images/portfolio-9-708.jpg 708w,
-                      ./images/portfolio-9-740.jpg 740w,
-                      ./images/portfolio-9-900.jpg 900w
-                    "
-                    width="370"
-                    class="img__project"
-                    src="images/portfolio-9-370.jpg"
-                    alt="ноутбук"
-                    sizes="(min-width:1200px) 33vh, (min-width:768px) 50vh, (max-width:767px) 100vh, 100vh"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/portfolio-9-370.jpg 1x,
+                        ./images/portfolio-9-740.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/portfolio-9-354.jpg 1x,
+                        ./images/portfolio-9-708.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/portfolio-9-450.jpg 1x,
+                        ./images/portfolio-9-900.jpg 2x
+                      "
+                    />
+                    <img
+                      class="img__project"
+                      src="images/portfolio-9-370.jpg"
+                      alt="ноутбук"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
