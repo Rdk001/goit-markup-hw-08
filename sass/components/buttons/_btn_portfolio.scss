@@ -19,11 +19,7 @@
 }
 .button__secondary {
   font-family: inherit;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
+  @include fonts(500, 16px, 1.6, 0.03);
   text-align: center;
 
   padding-top: 6px;

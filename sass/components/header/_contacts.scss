@@ -24,15 +24,9 @@
     }
   }
   .contacts__link {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: 0.02em;
+    @include fonts(500, 24px, 1.16, 0.02em);
     &.tel {
-      font-weight: 500;
-      font-size: 34px;
-      line-height: 40px;
-      letter-spacing: 0.02em;
+      @include fonts(500, 34px, 1.17, 0.02em);
     }
   }
 }
@@ -41,10 +35,7 @@
   .contacts__link {
     display: flex;
     align-items: center;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.02em;
+    @include fonts(500, 12px, 1.16, 0.02em);
   }
   .contacts__icon {
     display: flex;
@@ -70,7 +61,7 @@
     display: flex;
     margin-left: auto;
     &__link {
-      @include navLinkFont();
+      @include fonts(500, 14px, 1.14, 0.02em);
       padding-top: 32px;
       padding-bottom: 32px;
     }

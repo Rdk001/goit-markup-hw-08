@@ -1,15 +1,11 @@
-@media screen and(max-width:767px) {
-  .img__project {
+.img__project {
+  @include mobile {
     width: 450px;
   }
-}
-@media screen and(min-width:768px) {
-  .img__project {
+  @include tablet {
     width: 354px;
   }
-}
-@media screen and(min-width:1200px) {
-  .img__project {
+  @include desktop {
     width: 370px;
   }
 }
@@ -77,10 +73,8 @@
     top: 63px;
     left: 24px;
     margin: 0;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.55;
-    letter-spacing: 0.03em;
+    @include fonts(400, 18px, 1.55, 0.03em);
+
     color: $white__bg__color;
 
     width: 322px;
@@ -98,11 +92,7 @@
   border-right: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   &__title {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-
+    @include fonts(700, 18px, 2, 0.06em);
     color: $main__text__color;
     margin-top: 0;
     margin-bottom: 4px;

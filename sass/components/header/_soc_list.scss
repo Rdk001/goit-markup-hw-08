@@ -7,9 +7,7 @@
   }
 }
 .soc__link {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.22;
-  letter-spacing: 0.02em;
+  @include fonts(500, 18px, 1.22, 0.02em);
+
   color: $blue__bg__color;
 }

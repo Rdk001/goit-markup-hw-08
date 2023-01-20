@@ -1,6 +1,6 @@
 .modal__btn {
-  @include btnFont();
-
+  font-family: inherit;
+  @include fonts(700, 16px, 1.9, 0.06em);
   display: block;
   padding: 10px 50px;
   margin-top: 30px;

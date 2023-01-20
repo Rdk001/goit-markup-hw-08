@@ -1,5 +1,6 @@
 .button.main {
-  @include btnFont();
+  font-family: inherit;
+  @include fonts(700, 16px, 1.9, 0.06em);
   text-align: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: transparent;

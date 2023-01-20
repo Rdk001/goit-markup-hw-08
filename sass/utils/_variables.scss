@@ -12,12 +12,15 @@ $timing__function: cubic-bezier(0.4, 0, 0.2, 1);
 $main__font: Roboto, sans-serif;
 
 // MIXIN
+@mixin fonts($fw, $fs, $lh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
 
-@mixin navLinkFont() {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+@mixin animation($type) {
+  transition: $type 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @mixin centredFlex() {
@@ -26,14 +29,18 @@ $main__font: Roboto, sans-serif;
   justify-content: center;
 }
 
-@mixin animation($type) {
-  transition: $type 250ms cubic-bezier(0.4, 0, 0.2, 1);
+@mixin mobile {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
 }
-
-@mixin btnFont() {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
-  letter-spacing: 0.06em;
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
 }

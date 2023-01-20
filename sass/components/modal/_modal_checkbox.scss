@@ -28,10 +28,8 @@
 }
 
 .modal__checkbox__text {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
+  @include fonts(400, 12px, 1.16, 0.03em);
+
   width: 100%;
   color: $secondary__text__color;
   padding-left: 12px;

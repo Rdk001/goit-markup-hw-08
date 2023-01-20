@@ -15,10 +15,7 @@
   }
 }
 .form__title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
+  @include fonts(700, 14px, 1.7, 0.03em);
   text-transform: uppercase;
 
   color: $white__bg__color;
@@ -36,11 +33,7 @@
   border-radius: 4px;
 
   &[placeholder="E-mail"] {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-
-    letter-spacing: 0.03em;
+    @include fonts(400, 16px, 1.25, 0.03em);
 
     color: rgba(255, 255, 255, 0.6);
 
@@ -60,12 +53,10 @@
 
   &__text {
     @include centredFlex();
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
+    @include fonts(700, 16px, 1.9, 0.06em);
+
     width: 144px;
     height: 30px;
-    letter-spacing: 0.06em;
 
     margin-left: auto;
     margin-right: auto;

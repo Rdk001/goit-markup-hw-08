@@ -1,47 +1,32 @@
-@media screen and(max-width:479px) {
-  .hero {
+.hero {
+  width: 480px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/m-hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/m-hero.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 118px;
-    padding-bottom: 118px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          to right,
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url("../images/m-hero-2x.jpg");
-    }
-    &__title {
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 900;
-      font-size: 26px;
-      line-height: 1.62;
-
-      text-align: center;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-
-      color: $white__bg__color;
-    }
+      url("../images/m-hero-2x.jpg");
   }
-}
-@media screen and(min-width:480px) {
-  .hero {
+  @include tablet {
+    width: 768px;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -67,23 +52,9 @@
         ),
         url("../images/tab-hero-2x.jpg");
     }
-    &__title {
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 900;
-      font-size: 26px;
-      line-height: 1.62;
-
-      text-align: center;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-
-      color: $white__bg__color;
-    }
   }
-}
-@media screen and(min-width:768px) {
-  .hero {
+  @include desktop {
+    width: 100%;
     background-color: $dark__bg__color;
     color: $white__bg__color;
     background-image: linear-gradient(
@@ -112,11 +83,18 @@
     padding-bottom: 200px;
     margin-left: auto;
     margin-right: auto;
-    &__title {
-      font-weight: 900;
-      font-size: 44px;
-      line-height: 1.36;
-      letter-spacing: 0.06em;
+  }
+  &__title {
+    font-family: "Roboto";
+    @include fonts(900, 26px, 1.6, 0.06em);
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $white__bg__color;
+    margin-bottom: 40px;
+
+    @include tablet {
+      @include fonts(900, 44px, 1.36, 0.06em);
       text-transform: uppercase;
       text-align: center;
       width: 696px;
