@@ -192,17 +192,18 @@ img {
     margin-left: 93px;
   }
 }
-.current::after {
-  position: absolute;
-  bottom: -1px;
-  content: "";
-  width: 100%;
-  height: 4px;
-  display: block;
-  background: #2196f3;
-  border-radius: 2px;
+@media screen and (min-width: 768px) {
+  .current::after {
+    position: absolute;
+    bottom: -1px;
+    content: "";
+    width: 100%;
+    height: 4px;
+    display: block;
+    background: #2196f3;
+    border-radius: 2px;
+  }
 }
-
 @media screen and (min-width: 1200px) {
   .navigation__item {
     position: relative;
