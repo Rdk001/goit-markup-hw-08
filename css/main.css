@@ -154,6 +154,7 @@ img {
 }
 
 .navigation__link {
+  position: relative;
   color: #212121;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -191,22 +192,23 @@ img {
     margin-left: 93px;
   }
 }
+.current::after {
+  position: absolute;
+  bottom: -1px;
+  content: "";
+  width: 100%;
+  height: 4px;
+  display: block;
+  background: #2196f3;
+  border-radius: 2px;
+}
+
 @media screen and (min-width: 1200px) {
   .navigation__item {
     position: relative;
   }
   .navigation__item + .navigation__item {
     margin-left: 50px;
-  }
-  .current::after {
-    position: absolute;
-    bottom: -1px;
-    content: "";
-    width: 100%;
-    height: 4px;
-    display: block;
-    background: #2196f3;
-    border-radius: 2px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -239,6 +241,16 @@ img {
     line-height: 1.16;
     letter-spacing: 0.02em;
   }
+  .contacts__link.tel {
+    color: #2196f3;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 479px) {
+  .contacts__link.tel {
+    font-size: 27px;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 480px) {
   .contacts__link.tel {
     font-weight: 500;
     font-size: 34px;
@@ -298,6 +310,7 @@ img {
 }
 .soc__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 @media screen and (min-width: 768px) {
@@ -380,7 +393,6 @@ img {
 }
 
 .hero {
-  width: 480px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/m-hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -391,14 +403,13 @@ img {
   margin-right: auto;
   text-align: center;
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2) and (max-width: 767px), (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px), (min-resolution: 2dppx) and (max-width: 767px) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/m-hero-2x.jpg");
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
-    width: 768px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tab-hero.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -410,14 +421,13 @@ img {
     text-align: center;
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 2dppx) and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tab-hero-2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    width: 100%;
     background-color: #2f303a;
     color: #ffffff;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg.jpg");
@@ -431,7 +441,7 @@ img {
     margin-right: auto;
   }
 }
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-2x.jpg");
   }
@@ -444,10 +454,18 @@ img {
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   color: #ffffff;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
+  .hero__title {
+    width: 360px;
+  }
+}
+@media screen and (min-width: 1200px) {
   .hero__title {
     font-weight: 900;
     font-size: 44px;
@@ -457,7 +475,7 @@ img {
     text-align: center;
     width: 696px;
     color: #ffffff;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 40px auto;
   }
 }
 
@@ -505,12 +523,10 @@ img {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .quality__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
+.quality__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 @media screen and (min-width: 1200px) {
   .quality__list {
@@ -619,6 +635,7 @@ img {
     line-height: 1.16;
     letter-spacing: 0.03em;
     text-align: center;
+    margin-bottom: 50px;
   }
 }
 
@@ -795,7 +812,7 @@ img {
     width: 768px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    gap: 30px;
     justify-content: space-around;
   }
 }
@@ -859,8 +876,6 @@ img {
 
 @media screen and (max-width: 1199px) {
   .container__footer__icon {
-    margin-top: 60px;
-    margin-bottom: 60px;
     text-align: center;
   }
 }
@@ -1002,12 +1017,26 @@ img {
   left: 50%;
   padding: 40px;
   background: #ffffff;
-  max-width: 450px;
-  width: calc(100% - 30px);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__form {
@@ -1070,20 +1099,6 @@ img {
   fill: #2196f3;
 }
 
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 40px;
-  background: #fff;
-  max-width: 450px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  width: calc(100% - 30px);
-  border-radius: 4px;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .modal__form__label--comment {
   position: relative;
   display: block;
@@ -1132,7 +1147,6 @@ img {
 
 .checkbox__icon__border {
   position: absolute;
-  left: 40px;
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -1140,27 +1154,53 @@ img {
   border-radius: 2px;
   opacity: 1;
 }
+@media screen and (max-width: 1199px) {
+  .checkbox__icon__border {
+    left: 40px;
+  }
+}
 .modal__input__checkbox:checked ~ .checkbox__icon__border {
   opacity: 0;
 }
 
 .checkbox__icon {
   position: absolute;
-  left: 40px;
   opacity: 0;
+}
+@media screen and (max-width: 1199px) {
+  .checkbox__icon {
+    left: 40px;
+  }
 }
 .modal__input__checkbox:checked ~ .checkbox__icon {
   opacity: 1;
 }
 
 .modal__checkbox__text {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
   width: 100%;
   color: #757575;
-  padding-left: 12px;
+  padding-left: 24px;
+}
+@media screen and (max-width: 1199px) {
+  .modal__checkbox__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal__checkbox__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .modal__checkbox__text {
+    padding-left: 12px;
+  }
 }
 
 .modal__checkbox__link {

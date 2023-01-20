@@ -6,7 +6,10 @@
 }
 .checkbox__icon__border {
   position: absolute;
-  left: 40px;
+  @media screen and(max-width:1199px) {
+    left: 40px;
+  }
+
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -20,7 +23,9 @@
 
 .checkbox__icon {
   position: absolute;
-  left: 40px;
+  @media screen and(max-width:1199px) {
+    left: 40px;
+  }
   opacity: 0;
   .modal__input__checkbox:checked ~ & {
     opacity: 1;
@@ -28,11 +33,18 @@
 }
 
 .modal__checkbox__text {
-  @include fonts(400, 12px, 1.16, 0.03em);
-
+  @media screen and(max-width:1199px) {
+    @include fonts(400, 12px, 1.16, 0.03em);
+  }
+  @include desktop {
+    @include fonts(400, 14px, 1.7, 0.03em);
+  }
   width: 100%;
   color: $secondary__text__color;
-  padding-left: 12px;
+  @media screen and (max-width: 1199px) {
+    padding-left: 12px;
+  }
+  padding-left: 24px;
 }
 .modal__checkbox__link {
   color: $blue__bg__color;

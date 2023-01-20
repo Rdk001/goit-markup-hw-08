@@ -15,11 +15,10 @@
 }
 
 .quality__list {
-  @include mobile {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
   @include desktop {
     flex-wrap: nowrap;
   }

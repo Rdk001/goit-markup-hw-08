@@ -26,7 +26,13 @@
   .contacts__link {
     @include fonts(500, 24px, 1.16, 0.02em);
     &.tel {
-      @include fonts(500, 34px, 1.17, 0.02em);
+      color: $blue__bg__color;
+      @media screen and(max-width:479px) {
+        font-size: 27px;
+      }
+      @include mobile {
+        @include fonts(500, 34px, 1.17, 0.02em);
+      }
     }
   }
 }
