@@ -875,6 +875,12 @@ img {
   color: #2196f3;
 }
 
+@media screen and (max-width: 767px) {
+  .container__footer__icon {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
 @media screen and (max-width: 1199px) {
   .container__footer__icon {
     text-align: center;
